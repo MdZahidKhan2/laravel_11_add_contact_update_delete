@@ -10,6 +10,14 @@
 <body>
 
     <div class="container">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Navbar</a>
+          <div class="d-flex">
+            <a href="{{ route('logout') }}">{{ Auth::user()->name }}( Logout)</a>
+          </div>
+        </div>
+      </nav>
         <div class="row">
             @if(session('success'))
             <li class="alert alert-success">{{ session('success') }}</li>
